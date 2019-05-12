@@ -55,5 +55,5 @@
     "test": "node $NODE_DEBUG_OPTION node_modules/.bin/nyc mocha --config .mocharc.json"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
