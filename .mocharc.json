@@ -1,0 +1,7 @@
+{
+  "spec": [
+    "ts/**/*.test.ts"
+  ],
+  "require": "ts-node/register",
+  "bail": false
+}

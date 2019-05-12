@@ -1,0 +1,59 @@
+{
+  "author": {
+    "name": "Rick Osborne",
+    "url": "https://rickosborne.org"
+  },
+  "bugs": {
+    "url": "https://github.com/rickosborne/dynamo-ts-adapter/issues"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.453.0"
+  },
+  "description": "AWS Dynamo data serialization and deserialization for TypeScript",
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  },
+  "homepage": "https://github.com/rickosborne/dynamo-ts-adapter/",
+  "keywords": [
+    "dynamo",
+    "typescript",
+    "ts"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "main": "dist/index.js",
+  "name": "dynamo-ts-adapter",
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.test.ts",
+      "**/dist"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text"
+    ],
+    "sourceMap": true
+  },
+  "readme": "README.md",
+  "repository": "github:rickosborne/dynamo-ts-adapter",
+  "scripts": {
+    "prebuild": "rm -rf dist || true && tslint -c tslint.json --project tsconfig.json",
+    "build": "tsc",
+    "test": "node $NODE_DEBUG_OPTION node_modules/.bin/nyc mocha --config .mocharc.json"
+  },
+  "types": "dist/index.d.ts",
+  "version": "1.0.0"
+}
